@@ -13,4 +13,6 @@
   width: 100vw;
   background-size: 100% auto;
   display: flex;
+  align-items: center;
+  justify-content: center;
 }

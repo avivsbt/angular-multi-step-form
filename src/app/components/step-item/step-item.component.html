@@ -1,4 +1,4 @@
-<div class="step" [ngClass]="{'step-information' : information}">
+<div [ngClass]="information ? 'step-information' : 'step'">
     <div (click)="onSelected()" [ngClass]="{'step-selected' : selected === num}" class="step-num">{{num}}</div>
     @if(information){
     <div class="step-text">
@@ -7,3 +7,5 @@
     </div>
     }
 </div>
+
+<!-- [ngClass]="activeTimer ? 'button actve-timer' : 'button inactve-timer'" -->

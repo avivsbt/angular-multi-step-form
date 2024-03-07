@@ -1,3 +1,7 @@
+.step {
+    margin: 0 5px;
+}
+
 .step-information {
     display: flex;
     margin-bottom: 35px;
