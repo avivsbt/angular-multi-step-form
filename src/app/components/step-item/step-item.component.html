@@ -1,1 +1,9 @@
-<p>step-item works!</p>
+<div class="step" [ngClass]="{'step-information' : information}">
+    <div (click)="onSelected()" [ngClass]="{'step-selected' : selected === num}" class="step-num">{{num}}</div>
+    @if(information){
+    <div class="step-text">
+        <div class="step-num-text">STEP {{num}}</div>
+        {{text}}
+    </div>
+    }
+</div>

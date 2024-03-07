@@ -1,0 +1,36 @@
+.step-information {
+    display: flex;
+    margin-bottom: 35px;
+    align-items: center;
+}
+
+.step-num {
+    width: 25px;
+    height: 25px;
+    border-radius: 100px;
+    border: 2px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    cursor: pointer;
+}
+
+.step-selected {
+    background-color: #bee1fd;
+    border: 2px solid #bee1fd;
+    color: #000;
+}
+
+.step-text {
+    color: #fff;
+    font-family: 'buntu-medium';
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.step-num-text {
+    color: #b3b8ff;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
