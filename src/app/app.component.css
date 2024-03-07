@@ -5,6 +5,11 @@
   height: 100vh;
 }
 
+.wrapper-app-mobile {
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
 .inner-app {
   background-color: #fff;
   max-width: 940px;
@@ -16,4 +21,11 @@
   border-radius: 10px;
   margin: 0 20px;
   padding: 20px;
+}
+
+.inner-app-mobile {
+  width: 80%;
+  height: auto;
+  margin: -80px 10% 0 10%;
+  min-height: 100px;
 }

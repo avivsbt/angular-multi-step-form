@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'wrapper-steps',
@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
   templateUrl: './wrapper-steps.component.html',
   styleUrl: './wrapper-steps.component.css',
 })
-export class WrapperStepsComponent {}
+export class WrapperStepsComponent {
+  @Input() public position: 'top' | 'left' = 'left';
+}

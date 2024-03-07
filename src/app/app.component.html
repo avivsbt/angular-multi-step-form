@@ -1,5 +1,13 @@
-<section class="wrapper-app">
-  <div class="inner-app">
-    <wrapper-steps></wrapper-steps>
+<section [ngClass]="{'wrapper-app-mobile' : isMobile()}" class=" wrapper-app">
+
+  @if(isMobile()){
+  <wrapper-steps position="top"></wrapper-steps>
+  }
+
+  <div [ngClass]="{'inner-app-mobile' : isMobile()}" class="inner-app">
+    @if(!isMobile()){
+    <wrapper-steps position="left"></wrapper-steps>
+    }
   </div>
+
 </section>
