@@ -1,0 +1,19 @@
+.wrapper-app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.inner-app {
+  background-color: #fff;
+  max-width: 940px;
+  width: 100%;
+  height: 568px;
+  box-shadow: 4px 4px 20px -10px rgba(207, 207, 207, 0.75);
+  -webkit-box-shadow: 4px 4px 20px -10px rgba(207, 207, 207, 0.75);
+  -moz-box-shadow: 4px 4px 20px -10px rgba(207, 207, 207, 0.75);
+  border-radius: 10px;
+  margin: 0 20px;
+  padding: 20px;
+}

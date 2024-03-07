@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'buntu-bold';
+  src: url('assets/fonts/Ubuntu-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: bold;
+}
+@font-face {
+  font-family: 'buntu-medium';
+  src: url('assets/fonts/Ubuntu-Medium.ttf') format('truetype');
+  font-weight: medium;
+  font-style: medium;
+}
+@font-face {
+  font-family: 'buntu-regular';
+  src: url('assets/fonts/Ubuntu-Regular.ttf') format('truetype');
+}
+
+body {
+  font-family: 'buntu-regular';
+  background-color: #eef5ff;
+}
