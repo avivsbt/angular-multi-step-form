@@ -1,5 +1,7 @@
 import { NgClass } from '@angular/common';
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, Input, inject } from '@angular/core';
+import { MultiStepFormService } from '../../services/multi-step-form.service';
+import { ESteps } from '../../types';
 
 @Component({
   selector: 'step-item',
@@ -10,13 +12,14 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class StepItemComponent {
 
-  @Input() public num: number = 1;
+  @Input() public step: number = ESteps.PersonalInfo;
   @Input() public text: string = "";
   @Input() public information: boolean = false;
-  @Input() public selected: number = 1;
-  @Output() public selectedEvent = new EventEmitter<number>();
+
+  public multiStepFormService = inject(MultiStepFormService);
 
   onSelected(): void {
-    this.selectedEvent.emit(this.num);
+    this.multiStepFormService.setStep(this.step);
   }
+
 }

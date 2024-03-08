@@ -1,8 +1,8 @@
 <div [ngClass]="information ? 'step-information' : 'step'">
-    <div (click)="onSelected()" [ngClass]="{'step-selected' : selected === num}" class="step-num">{{num}}</div>
+    <div (click)="onSelected()" [ngClass]="{'step-selected' : multiStepFormService.step() === step}" class="step-num">{{step}}</div>
     @if(information){
     <div class="step-text">
-        <div class="step-num-text">STEP {{num}}</div>
+        <div class="step-num-text">STEP {{step}}</div>
         {{text}}
     </div>
     }

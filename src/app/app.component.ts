@@ -8,8 +8,7 @@ import { AddOnsComponent } from './steps/add-ons/add-ons.component';
 import { FinishingUpComponent } from './steps/finishing-up/finishing-up.component';
 import { ThankYouComponent } from './steps/thank-you/thank-you.component';
 import { MultiStepFormService } from './services/multi-step-form.service';
-import { StepsForm } from './types';
-
+import { ESteps } from './types';
 
 @Component({
   selector: 'app-root',
@@ -32,6 +31,7 @@ export class AppComponent implements OnInit {
   public multiStepFormService = inject(MultiStepFormService);
   
   public isMobile = signal<boolean>(false);
+  public readonly step : typeof ESteps = ESteps;
 
   constructor() { }
 

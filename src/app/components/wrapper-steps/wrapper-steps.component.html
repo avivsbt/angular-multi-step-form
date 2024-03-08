@@ -1,17 +1,17 @@
 @if(position === 'left'){
 <section class="wrapper-steps-left">
-    <step-item [num]="1" (selectedEvent)="onSelected($event)" text="YOUR INFO" [information]="true"></step-item>
-    <step-item [num]="2" (selectedEvent)="onSelected($event)" text="SELECT PLAN" [information]="true"></step-item>
-    <step-item [num]="3" (selectedEvent)="onSelected($event)" text="ADD-ONS" [information]="true"></step-item>
-    <step-item [num]="4" (selectedEvent)="onSelected($event)" text="SUMMARY" [information]="true"></step-item>
+    <step-item [step]="1" text="YOUR INFO" [information]="true"></step-item>
+    <step-item [step]="2" text="SELECT PLAN" [information]="true"></step-item>
+    <step-item [step]="3" text="ADD-ONS" [information]="true"></step-item>
+    <step-item [step]="4" text="SUMMARY" [information]="true"></step-item>
 
 </section>
 }
 @else if(position === 'top') {
 <section class="wrapper-steps-top">
-    <step-item [num]="1" (selectedEvent)="onSelected($event)"></step-item>
-    <step-item [num]="2" (selectedEvent)="onSelected($event)"></step-item>
-    <step-item [num]="3" (selectedEvent)="onSelected($event)"></step-item>
-    <step-item [num]="4" (selectedEvent)="onSelected($event)"></step-item>
+    <step-item [step]="1"></step-item>
+    <step-item [step]="2"></step-item>
+    <step-item [step]="3"></step-item>
+    <step-item [step]="4"></step-item>
 </section>
 }

@@ -10,9 +10,4 @@ import { StepItemComponent } from '../step-item/step-item.component';
 })
 export class WrapperStepsComponent {
   @Input() public position: 'top' | 'left' = 'left';
-
-  onSelected(selected: number): void {
-    console.log(selected);
-  }
-  
 }
