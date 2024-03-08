@@ -8,6 +8,34 @@
     @if(!isMobile()){
     <wrapper-steps position="left"></wrapper-steps>
     }
+
+    <div class="section-step" [ngClass]="{'section-step-desktop' : !isMobile()}">
+
+      @switch (multiStepFormService.step()) {
+      @case (1) {
+      <personal-info></personal-info>
+      }
+      <!-- @case (2) {
+      <plan></plan>
+      }
+      @case (3) {
+      <add-ons></add-ons>
+      }
+      @case (4) {
+      <finishing-up></finishing-up>
+      }
+      @case (5) {
+      <thank-you></thank-you>
+      } -->
+      }
+    </div>
+    <!-- export enum ESteps {
+      PersonalInfo,
+      Plan,
+      AddOns,
+      FinishingUp,
+      ThankYou
+  } -->
   </div>
 
 </section>

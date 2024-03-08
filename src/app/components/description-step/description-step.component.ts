@@ -1,12 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-description-step',
+  selector: 'description-step',
   standalone: true,
   imports: [],
   templateUrl: './description-step.component.html',
   styleUrl: './description-step.component.css'
 })
 export class DescriptionStepComponent {
+
+  @Input() public title: string = "";
+  @Input() public description: string = "";
 
 }

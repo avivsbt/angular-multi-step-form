@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { DescriptionStepComponent } from '../../components/description-step/description-step.component';
 
 @Component({
-  selector: 'add-ons',
+  selector: 'personal-info',
   standalone: true,
   imports: [DescriptionStepComponent],
-  templateUrl: './add-ons.component.html',
-  styleUrl: './add-ons.component.css'
+  templateUrl: './personal-info.component.html',
+  styleUrl: './personal-info.component.css'
 })
-export class AddOnsComponent {
+export class PersonalInfoComponent {
 
 }

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-thank-you',
+  selector: 'thank-you',
   standalone: true,
   imports: [],
   templateUrl: './thank-you.component.html',

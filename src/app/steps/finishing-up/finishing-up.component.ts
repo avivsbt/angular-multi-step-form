@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { DescriptionStepComponent } from '../../components/description-step/description-step.component';
 
 @Component({
-  selector: 'app-finishing-up',
+  selector: 'finishing-up',
   standalone: true,
-  imports: [],
+  imports: [DescriptionStepComponent],
   templateUrl: './finishing-up.component.html',
   styleUrl: './finishing-up.component.css'
 })

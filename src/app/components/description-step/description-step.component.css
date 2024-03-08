@@ -1,0 +1,17 @@
+.wrapper-description {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper-description h1 {
+    color: #042256;
+    font-family: 'buntu-bold';
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.wrapper-description p {
+    color: #9b9ba5;
+    font-size: 14px;
+    margin-top: 5px;
+}
