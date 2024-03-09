@@ -10,23 +10,7 @@
     }
 
     <div class="section-step" [ngClass]="{'section-step-desktop' : !isMobile()}">
-      @switch (multiStepFormService.step()) {
-      @case (step.PersonalInfo) {
-      <personal-info></personal-info>
-      }
-      @case (step.Plan) {
-      <plan></plan>
-      }
-      @case (step.AddOns) {
-      <add-ons></add-ons>
-      }
-      @case (step.FinishingUp) {
-      <finishing-up></finishing-up>
-      }
-      @case (step.ThankYou) {
-      <thank-you></thank-you>
-      }
-      }
+      <step-form></step-form>
     </div>
   </div>
 

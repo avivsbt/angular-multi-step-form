@@ -2,13 +2,7 @@ import { Component, OnInit, inject, signal } from '@angular/core';
 import { WrapperStepsComponent } from './components/wrapper-steps/wrapper-steps.component';
 import { BreakpointObserver, Breakpoints } from "@angular/cdk/layout"
 import { NgClass } from '@angular/common';
-import { PersonalInfoComponent } from './steps/personal-info/personal-info.component';
-import { PlanComponent } from './steps/plan/plan.component';
-import { AddOnsComponent } from './steps/add-ons/add-ons.component';
-import { FinishingUpComponent } from './steps/finishing-up/finishing-up.component';
-import { ThankYouComponent } from './steps/thank-you/thank-you.component';
-import { MultiStepFormService } from './services/multi-step-form.service';
-import { ESteps } from './types';
+import { StepFormComponent } from './components/step-form/step-form.component';
 
 @Component({
   selector: 'app-root',
@@ -17,22 +11,15 @@ import { ESteps } from './types';
   styleUrl: './app.component.css',
   imports: [
     WrapperStepsComponent,
-    NgClass,
-    PersonalInfoComponent,
-    PlanComponent,
-    AddOnsComponent,
-    FinishingUpComponent,
-    ThankYouComponent,
+    StepFormComponent,
+    NgClass
   ],
 })
 export class AppComponent implements OnInit {
 
   private breakpointobserver = inject(BreakpointObserver);
-  public multiStepFormService = inject(MultiStepFormService);
-  
   public isMobile = signal<boolean>(false);
-  public readonly step : typeof ESteps = ESteps;
-
+  
   constructor() { }
 
   ngOnInit(): void {
