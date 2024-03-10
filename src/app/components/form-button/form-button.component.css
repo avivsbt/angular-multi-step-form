@@ -1,0 +1,25 @@
+.button {
+    width: 125px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    border-radius: 5px;
+    outline: 0;
+    border: none;
+    background-color: transparent;
+    color: #9797a1;
+    cursor: pointer;
+    font-family: "buntu-bold";
+}
+
+.next {
+    background-color: #174a8b;
+    color: #fff;
+}
+
+.confirm {
+    background-color: #938cfe;
+    color: #fff;
+}

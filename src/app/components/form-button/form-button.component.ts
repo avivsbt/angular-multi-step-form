@@ -10,6 +10,7 @@ import { MultiStepFormService } from '../../services/multi-step-form.service';
 })
 export class FormButtonComponent {
   public multiStepFormService = inject(MultiStepFormService);
+  @Input({ required: true }) public text: string = '';
   @Input({ required: true }) public button: 'back' | 'next' | 'confirm' = 'next';
   @Input() public typeButton: 'button' | 'submit' = 'button';
 
