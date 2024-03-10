@@ -5,6 +5,7 @@ import { FormButtonComponent } from '../../components/form-button/form-button.co
 import { plans } from '../../shared/data/data';
 import { IPlan } from '../../types';
 import { WrapperButtonsComponent } from '../../components/wrapper-buttons/wrapper-buttons.component';
+import { PlanOptionComponent } from '../../components/plan-option/plan-option.component';
 
 @Component({
   selector: 'plan',
@@ -13,7 +14,8 @@ import { WrapperButtonsComponent } from '../../components/wrapper-buttons/wrappe
     DescriptionStepComponent,
     ReactiveFormsModule,
     FormButtonComponent,
-    WrapperButtonsComponent
+    WrapperButtonsComponent,
+    PlanOptionComponent
   ],
   templateUrl: './plan.component.html',
   styleUrl: './plan.component.css'

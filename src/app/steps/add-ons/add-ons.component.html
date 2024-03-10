@@ -1,17 +1,21 @@
-<description-step title="Pick add-ons" description="Add-ons help enhance your gaming experience."></description-step>
+<section class="container">
+    <description-step title="Pick add-ons"
+        description="Add-ons help enhance your gaming experience."></description-step>
 
-<ng-container [formGroup]="form">
-    <div class="field">
-        <label class="label">Add Ons</label>
-        @for (addOns of addOnses; track addOns.value) {
-        <label class="label"> {{addOns.name}}</label>
-        <input type="checkbox" [value]="addOns.value" [formControlName]="addOns.formControlName" />
-        }
-    </div>
+    <ng-container [formGroup]="form">
+        <div class="field">
+            <label class="label">Add Ons</label>
+            @for (addOns of addOnses; track addOns.value) {
+            <label class="label"> {{addOns.name}}</label>
+            <input type="checkbox" [value]="addOns.value" [formControlName]="addOns.formControlName" />
+            }
+        </div>
 
-</ng-container>
+    </ng-container>
 
-<wrapper-buttons>
-    <form-button text="Next Step" [button]="'next'"></form-button>
-    <form-button text="Go Back" [button]="'back'"></form-button>
-</wrapper-buttons>
+    <wrapper-buttons>
+        <form-button text="Next Step" [button]="'next'"></form-button>
+        <form-button text="Go Back" [button]="'back'"></form-button>
+    </wrapper-buttons>
+
+</section>

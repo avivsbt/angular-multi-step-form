@@ -9,8 +9,8 @@ export enum ESteps {
 export interface IPlan {
     value: string;
     name: string;
-    Monthly: number;
-    Yearly: number;
+    monthly: number;
+    yearly: number;
 }
 
 export interface IaddOns {
@@ -18,8 +18,8 @@ export interface IaddOns {
     name: string;
     formControlName: string;
     description: string;
-    Monthly: number;
-    Yearly: number;
+    monthly: number;
+    yearly: number;
 }
 
 

@@ -3,7 +3,7 @@ import { ESteps } from "../types";
 
 @Injectable({ providedIn: 'root' })
 export class MultiStepFormService {
-    public step = signal(ESteps.PersonalInfo);
+    public step = signal(ESteps.Plan);
 
     public nextStep(): void {
         this.step.update(prev => prev + 1);
