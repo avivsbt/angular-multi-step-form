@@ -7,11 +7,13 @@
             @for (plan of plans; track plan.value) {
             <div class="wrapper-plan-option">
                 <input type="radio" [value]="plan.value" formControlName="plan" />
-                <plan-option price={{plan.monthly}} name={{plan.name}}></plan-option>
+                <plan-option [price]="multiStepFormService.isYearly() ? plan.yearly : plan.monthly" name={{plan.name}}></plan-option>
             </div>
             }
         </div>
     </ng-container>
+
+    <period></period>
 
     <wrapper-buttons>
         <form-button text="Next Step" [button]="'next'"></form-button>

@@ -6,6 +6,8 @@ import { plans } from '../../shared/data/data';
 import { IPlan } from '../../types';
 import { WrapperButtonsComponent } from '../../components/wrapper-buttons/wrapper-buttons.component';
 import { PlanOptionComponent } from '../../components/plan-option/plan-option.component';
+import { PeriodComponent } from '../../components/period/period.component';
+import { MultiStepFormService } from '../../services/multi-step-form.service';
 
 @Component({
   selector: 'plan',
@@ -15,13 +17,15 @@ import { PlanOptionComponent } from '../../components/plan-option/plan-option.co
     ReactiveFormsModule,
     FormButtonComponent,
     WrapperButtonsComponent,
-    PlanOptionComponent
+    PlanOptionComponent,
+    PeriodComponent
   ],
   templateUrl: './plan.component.html',
   styleUrl: './plan.component.css'
 })
 export class PlanComponent implements OnInit {
   private rootFormGroup = inject(FormGroupDirective);
+  public multiStepFormService = inject(MultiStepFormService);
   @Input({ required: true }) public formGroupName: string = "";
   public form!: FormGroup;
   public plans: IPlan[] = plans;

@@ -1,1 +1,10 @@
-<p>period works!</p>
+<div class="weapper-period">
+    <div [ngClass]="{'period-selected' : !multiStepFormService.isYearly()}" class="text-period">Monthly</div>
+    <div>
+        <label class="switch">
+            <input type="checkbox" (change)="onSwitch()" [checked]="multiStepFormService.isYearly()">
+            <span class="slider round"></span>
+        </label>
+    </div>
+    <div [ngClass]="{'period-selected' : multiStepFormService.isYearly()}" class="text-period">Yearly</div>
+</div>

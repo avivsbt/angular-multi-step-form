@@ -9,5 +9,5 @@ import { Component, Input } from '@angular/core';
 })
 export class PlanOptionComponent {
   @Input({ required: true }) public name: string = "";
-  @Input({ required: true }) public price: string = "";
+  @Input({ required: true }) public price: number = 0;
 }
