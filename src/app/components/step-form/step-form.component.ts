@@ -29,9 +29,11 @@ export class StepFormComponent {
   public readonly step: typeof ESteps = ESteps;
 
   public multiStepForm = this.fb.group({
-    name: ['', Validators.required],
-    email: ['', [Validators.required, Validators.email]],
-    phone: ['', Validators.required, Validators.pattern(RegexPhoneNumber)],
+    personalInfo: this.fb.group({
+      name: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      phone: ['', Validators.required]
+    })
   });
 
   onSubmit(): void {

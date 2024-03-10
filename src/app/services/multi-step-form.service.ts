@@ -6,11 +6,12 @@ export class MultiStepFormService {
     public step = signal(ESteps.PersonalInfo);
 
     public nextStep(): void {
-        this.step.update(prev => prev++);
+        this.step.update(prev => prev + 1);
+        
     }
 
     public previousStep(): void {
-        this.step.update(prev => prev--);
+        this.step.update(prev => prev - 1);
     }
 
     public setStep(step: number): void {

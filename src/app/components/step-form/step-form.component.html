@@ -1,7 +1,7 @@
 <form class="form" [formGroup]="multiStepForm" (ngSubmit)="onSubmit()">
     @switch (multiStepFormService.step()) {
     @case (step.PersonalInfo) {
-    <personal-info></personal-info>
+    <personal-info formGroupName="personalInfo"></personal-info>
     }
     @case (step.Plan) {
     <plan></plan>
@@ -16,7 +16,5 @@
     <thank-you></thank-you>
     }
     }
-    <div>
-        <button type="submit" class="button">Submit</button>
-    </div>
+
 </form>
