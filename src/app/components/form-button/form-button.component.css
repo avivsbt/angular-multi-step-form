@@ -14,6 +14,12 @@
     font-family: "buntu-bold";
 }
 
+.back {
+    justify-content: start;
+    padding: 0;
+    width: auto;
+}
+
 .next {
     background-color: #174a8b;
     color: #fff;
