@@ -2,7 +2,7 @@ import { Component, Input, OnInit, inject, input } from '@angular/core';
 import { DescriptionStepComponent } from '../../components/description-step/description-step.component';
 import { FormGroup, FormGroupDirective, ReactiveFormsModule } from '@angular/forms';
 import { FormButtonComponent } from '../../components/form-button/form-button.component';
-import { MultiStepFormService } from '../../services/multi-step-form.service';
+import { WrapperButtonsComponent } from '../../components/wrapper-buttons/wrapper-buttons.component';
 
 @Component({
   selector: 'personal-info',
@@ -10,7 +10,8 @@ import { MultiStepFormService } from '../../services/multi-step-form.service';
   imports: [
     DescriptionStepComponent,
     ReactiveFormsModule,
-    FormButtonComponent
+    FormButtonComponent,
+    WrapperButtonsComponent
   ],
   templateUrl: './personal-info.component.html',
   styleUrl: './personal-info.component.css'

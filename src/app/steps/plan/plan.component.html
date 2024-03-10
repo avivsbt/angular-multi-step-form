@@ -1,1 +1,16 @@
-<description-step title="Select your plan" description="You have the option of monthly or yearly billing."></description-step>
+<description-step title="Select your plan"
+    description="You have the option of monthly or yearly billing."></description-step>
+
+<ng-container [formGroup]="form">
+    <div class="field">
+        @for (plan of plans; track plan.value) {
+        <label class="label"> {{plan.name}}</label>
+        <input type="radio" [value]="plan.value" formControlName="plan" />
+        }
+    </div>
+</ng-container>
+
+<wrapper-buttons>
+    <form-button [button]="'back'"></form-button>
+    <form-button [button]="'next'"></form-button>
+</wrapper-buttons>

@@ -7,7 +7,6 @@ import { PlanComponent } from '../../steps/plan/plan.component';
 import { ThankYouComponent } from '../../steps/thank-you/thank-you.component';
 import { ESteps } from '../../types';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
-import { RegexPhoneNumber } from '../../shared/lib';
 
 @Component({
   selector: 'step-form',
@@ -33,6 +32,14 @@ export class StepFormComponent {
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       phone: ['', Validators.required]
+    }),
+    plan: this.fb.group({
+      plan: ['arcade', Validators.required],
+    }),
+    addOns: this.fb.group({
+      onlineService: false,
+      largerStorage: false,
+      customizableProfile: false
     })
   });
 
