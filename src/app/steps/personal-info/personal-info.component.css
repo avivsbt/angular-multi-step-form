@@ -1,0 +1,31 @@
+.field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 26px;
+    font-size: 14px;
+}
+
+.top-field {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.label {
+    color: #0a1a33;
+}
+
+.input {
+    border: 1px solid #dbdae0;
+    border-radius: 5px;
+    height: 26px;
+    padding: 10px;
+}
+
+.error {
+    color: #f52b45;
+}
+
+.input-error {
+    border: 1px solid #f52b45;
+}
