@@ -6,23 +6,37 @@
         <div class="field">
             <div class="top-field">
                 <label class="label">Name</label>
-                <!-- <div class="error">test</div> input-error -->
+                @if(form.get('name')?.invalid && (form.get('name')?.dirty || form.get('name')?.touched)){
+                <div class="error">This field is required</div>
+                }
             </div>
-            <input type="text" class="input" formControlName="name" />
+            <input type="text" class="input" formControlName="name"
+                [class.invalid]="form.get('name')?.invalid && (form.get('name')?.dirty || form.get('name')?.touched)" />
         </div>
         <div class="field">
             <div class="top-field">
                 <label class="label">Email Address</label>
-                <!-- <div class="error">test</div> input-error -->
+                @if(form.get('email')?.invalid && (form.get('email')?.dirty || form.get('email')?.touched)){
+                @if(form.get('email')?.errors?.['required']) {
+                <div class="error">This field is required</div>
+                }
+                @if(form.get('email')?.errors?.['pattern']) {
+                <div class="error">This field is not valid</div>
+                }
+                }
             </div>
-            <input type="text" class="input" formControlName="email" />
+            <input type="text" class="input" formControlName="email"
+                [class.invalid]="form.get('email')?.invalid && (form.get('email')?.dirty || form.get('email')?.touched)" />
         </div>
         <div class="field">
             <div class="top-field">
                 <label class="label">Phone Number</label>
-                <!-- <div class="error">test</div> input-error -->
+                @if(form.get('phone')?.invalid && (form.get('phone')?.dirty || form.get('phone')?.touched)){
+                <div class="error">This field is required</div>
+                }
             </div>
-            <input type="text" class="input" formControlName="phone" />
+            <input type="text" class="input" formControlName="phone"
+                [class.invalid]="form.get('phone')?.invalid && (form.get('phone')?.dirty || form.get('phone')?.touched)" />
         </div>
     </ng-container>
 
