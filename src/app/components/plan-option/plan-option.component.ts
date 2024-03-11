@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, inject } from '@angular/core';
+import { MultiStepFormService } from '../../services/multi-step-form.service';
 
 @Component({
   selector: 'plan-option',
@@ -8,6 +9,7 @@ import { Component, Input } from '@angular/core';
   styleUrl: './plan-option.component.css'
 })
 export class PlanOptionComponent {
+  public multiStepFormService = inject(MultiStepFormService);
   @Input({ required: true }) public name: string = "";
   @Input({ required: true }) public price: number = 0;
 }

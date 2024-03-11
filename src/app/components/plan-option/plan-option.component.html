@@ -3,5 +3,8 @@
 </div>
 <div class="plan-data">
     <div class="plan-text">{{name}}</div>
-    <div class="plan-price">{{price}}</div>
+    <div class="plan-price">${{price}}/{{multiStepFormService.isYearly() ? "yr" : "mo"}}</div>
+    @if(multiStepFormService.isYearly()) {
+        <div class="plan-free">2 months free</div>
+    }
 </div>
