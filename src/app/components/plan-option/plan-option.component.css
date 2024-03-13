@@ -1,3 +1,12 @@
+
+
+.wrapper-plan-option {
+    position: relative;
+    background-color: #f8f9fe;
+    height: 160px;
+    padding: 20px 15px;
+}
+
 .plan-data {
     display: flex;
     flex-direction: column;

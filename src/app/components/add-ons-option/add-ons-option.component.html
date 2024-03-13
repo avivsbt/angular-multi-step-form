@@ -1,4 +1,5 @@
-<div class="wrapper-add-ons" [ngClass]="{'add-ons-selected' : selected}" (click)="onSelected.emit(addOns.formControlName)">
+<div class="wrapper-add-ons" [ngClass]="{'add-ons-selected' : selected}"
+    (click)="onSelected.emit(addOns.formControlName)">
     <div class="wrapper-checkbox">
         <ng-content></ng-content>
     </div>

@@ -1,10 +1,15 @@
-<div class="plan-icon">
-    <img [src]="'/assets/images/icon-' + name.toLowerCase() + '.svg'" />
-</div>
-<div class="plan-data">
-    <div class="plan-text">{{name}}</div>
-    <div class="plan-price">${{price}}/{{multiStepFormService.isYearly() ? "yr" : "mo"}}</div>
-    @if(multiStepFormService.isYearly()) {
+<div class="wrapper-plan-option">
+    <ng-content></ng-content>
+
+    <div class="plan-icon">
+        <img [src]="'/assets/images/icon-' + plan.name.toLowerCase() + '.svg'" />
+    </div>
+
+    <div class="plan-data">
+        <div class="plan-text">{{plan.name}}</div>
+        <div class="plan-price">${{multiStepFormService.isYearly() ? plan.yearly + "/yr" : plan.monthly + "/mo"}}</div>
+        @if(multiStepFormService.isYearly()) {
         <div class="plan-free">2 months free</div>
-    }
+        }
+    </div>
 </div>

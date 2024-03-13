@@ -5,10 +5,9 @@
     <ng-container [formGroup]="form">
         <div class="wrapper-plan-options">
             @for (plan of plans; track plan.value) {
-            <div class="wrapper-plan-option">
+            <plan-option class="plan-option" [plan]="plan">
                 <input type="radio" [value]="plan.value" formControlName="plan" />
-                <plan-option [price]="multiStepFormService.isYearly() ? plan.yearly : plan.monthly" name={{plan.name}}></plan-option>
-            </div>
+            </plan-option>
             }
         </div>
     </ng-container>
