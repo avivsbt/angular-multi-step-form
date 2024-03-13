@@ -1,0 +1,42 @@
+.wrapper-add-ons {
+    background-color: #f8f9fe;
+    border-radius: 5px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: 0.3s;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.wrapper-checkbox {
+    margin-right: 10px;
+}
+
+.wrapper-add-ons-title{
+    font-family: "buntu-medium";
+}
+
+.wrapper-add-ons-description{
+    font-size: 12px;
+    margin-top: 5px;
+    color: #b0afb5;
+}
+
+.wrapper-add-ons-data {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.wrapper-add-ons:hover, .add-ons-selected {
+    border: 1px solid #534aa7;
+}
+
+.wrapper-add-ons-price {
+    margin-top: 5px;
+    font-size: 12px;
+    color: #b0afb5;
+}

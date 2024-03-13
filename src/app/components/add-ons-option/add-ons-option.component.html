@@ -1,1 +1,20 @@
-<p>add-ons-option works!</p>
+<div class="wrapper-add-ons" [ngClass]="{'add-ons-selected' : selected}" (click)="onSelected.emit(addOns.formControlName)">
+    <div class="wrapper-checkbox">
+        <ng-content></ng-content>
+    </div>
+    <div class="wrapper-add-ons-data">
+        <div class="wrapper-add-ons-left">
+            <div class="wrapper-add-ons-title">
+                {{addOns.name}}
+            </div>
+            <div class="wrapper-add-ons-description">
+                {{addOns.description}}
+            </div>
+        </div>
+        <div class="wrapper-add-ons-right">
+            <div class="wrapper-add-ons-price">
+                +${{multiStepFormService.isYearly() ? addOns.yearly + "/yr" : addOns.monthly + "/mo"}}
+            </div>
+        </div>
+    </div>
+</div>

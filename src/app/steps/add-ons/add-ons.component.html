@@ -3,14 +3,11 @@
         description="Add-ons help enhance your gaming experience."></description-step>
 
     <ng-container [formGroup]="form">
-        <div class="field">
-            <label class="label">Add Ons</label>
-            @for (addOns of addOnses; track addOns.value) {
-            <label class="label"> {{addOns.name}}</label>
-            <input type="checkbox" [value]="addOns.value" [formControlName]="addOns.formControlName" />
-            }
-        </div>
-
+        @for (addOns of addOnses; track addOns.name) {
+        <add-ons-option (onSelected)="handleSelected($event)" [selected]="form.value[addOns.formControlName]" [addOns]="addOns">
+            <input type="checkbox" [formControlName]="addOns.formControlName" />
+        </add-ons-option>
+        }
     </ng-container>
 
     <wrapper-buttons>
