@@ -13,6 +13,7 @@ export class FormButtonComponent {
   @Input({ required: true }) public text: string = '';
   @Input({ required: true }) public button: 'back' | 'next' | 'confirm' = 'next';
   @Input() public typeButton: 'button' | 'submit' = 'button';
+  @Input() public disabled: boolean = false;
 
   onClick(): void {
     if(this.button === 'next') {

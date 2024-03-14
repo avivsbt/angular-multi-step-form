@@ -29,3 +29,7 @@
     background-color: #938cfe;
     color: #fff;
 }
+
+button:disabled{
+    opacity: 0.3;
+}
