@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { DescriptionStepComponent } from '../../components/description-step/description-step.component';
 import { WrapperButtonsComponent } from '../../components/wrapper-buttons/wrapper-buttons.component';
 import { FormButtonComponent } from '../../components/form-button/form-button.component';
+import { JsonPipe } from '@angular/common';
+import { FormValue } from '../../types';
 
 @Component({
   selector: 'finishing-up',
@@ -9,11 +11,15 @@ import { FormButtonComponent } from '../../components/form-button/form-button.co
   imports: [
     DescriptionStepComponent,
     FormButtonComponent,
-    WrapperButtonsComponent
+    WrapperButtonsComponent,
+    JsonPipe
   ],
   templateUrl: './finishing-up.component.html',
   styleUrl: './finishing-up.component.css'
 })
-export class FinishingUpComponent {
 
+
+export class FinishingUpComponent {
+  @Input({ required: true }) public formValue: FormValue = {} as FormValue;
+  @Input({ required: true }) public disabled: boolean = true;
 }

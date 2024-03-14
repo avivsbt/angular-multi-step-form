@@ -2,8 +2,10 @@
     <description-step title="Finishing up"
         description="Double-check everything looks OK before confirming."></description-step>
 
+    {{formValue | json}}
+
     <wrapper-buttons>
-        <form-button text="Confirm" [typeButton]="'submit'" [button]="'confirm'"></form-button>
+        <form-button [disabled]="disabled" text="Confirm" [typeButton]="'submit'" [button]="'confirm'"></form-button>
         <form-button text="Go Back" [button]="'back'"></form-button>
     </wrapper-buttons>
 </section>

@@ -22,4 +22,19 @@ export interface IaddOns {
     yearly: number;
 }
 
+export type FormValue = Partial<{
+    personalInfo: Partial<{
+        name: string | null;
+        email: string | null;
+        phone: string | null;
+    }>;
+    plan: Partial<{
+        plan: string | null;
+    }>;
+    addOns: Partial<{
+        onlineService: boolean | null;
+        largerStorage: boolean | null;
+        customizableProfile: boolean | null;
+    }>;
+}>
 
