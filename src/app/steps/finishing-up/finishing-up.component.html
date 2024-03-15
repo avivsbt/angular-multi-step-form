@@ -2,7 +2,11 @@
     <description-step title="Finishing up"
         description="Double-check everything looks OK before confirming."></description-step>
 
-    {{formValue | json}}
+    {{formValue() | json}}
+    {{formValue()?.plan?.plan}}
+    {{formValue()?.addOns?.onlineService}}
+    {{formValue()?.addOns?.largerStorage}}
+    {{formValue()?.addOns?.customizableProfile}}
 
     <wrapper-buttons>
         <form-button [disabled]="disabled" text="Confirm" [typeButton]="'submit'" [button]="'confirm'"></form-button>

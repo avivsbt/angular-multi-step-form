@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, computed, input } from '@angular/core';
 import { DescriptionStepComponent } from '../../components/description-step/description-step.component';
 import { WrapperButtonsComponent } from '../../components/wrapper-buttons/wrapper-buttons.component';
 import { FormButtonComponent } from '../../components/form-button/form-button.component';
@@ -20,6 +20,6 @@ import { FormValue } from '../../types';
 
 
 export class FinishingUpComponent {
-  @Input({ required: true }) public formValue: FormValue = {} as FormValue;
+  public formValue = input<FormValue>();
   @Input({ required: true }) public disabled: boolean = true;
 }
