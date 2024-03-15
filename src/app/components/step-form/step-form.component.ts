@@ -44,10 +44,7 @@ export class StepFormComponent {
   });
 
   onSubmit(): void {
-    console.log(
-      'submitted form',
-      this.multiStepForm.value,
-      this.multiStepForm.invalid
-    );
+    this.multiStepFormService.setStep(ESteps.ThankYou);
+    console.log('submitted form',this.multiStepForm.value);
   }
 }
