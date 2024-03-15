@@ -15,10 +15,12 @@ export class StepItemComponent {
   @Input() public step: number = ESteps.PersonalInfo;
   @Input() public text: string = "";
   @Input() public information: boolean = false;
+  public readonly steps: typeof ESteps = ESteps;
 
   public multiStepFormService = inject(MultiStepFormService);
 
   onSelected(): void {
+    if (this.multiStepFormService.step() === ESteps.ThankYou) return;
     this.multiStepFormService.setStep(this.step);
   }
 
