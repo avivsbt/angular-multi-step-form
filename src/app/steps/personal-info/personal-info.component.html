@@ -1,7 +1,7 @@
 <section class="container">
 
-    <description-step title="Personal info"
-        description="Please provide your name, email address, and phone number."></description-step>
+    <description-step title="Personal info" description="Please provide your name, email address, and phone number." />
+
     <ng-container [formGroup]="form">
         <div class="field">
             <div class="top-field">
@@ -11,7 +11,7 @@
                 }
             </div>
             <input type="text" class="input" formControlName="name"
-                [class.invalid]="form.get('name')?.invalid && (form.get('name')?.dirty || form.get('name')?.touched)" />
+                [class.invalid]="form.get('name')?.invalid && (form.get('name')?.dirty ||form.get('name')?.touched)" />
         </div>
         <div class="field">
             <div class="top-field">

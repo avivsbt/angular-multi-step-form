@@ -1,10 +1,10 @@
 <section class="container">
-    <description-step title="Pick add-ons"
-        description="Add-ons help enhance your gaming experience."></description-step>
+    <description-step title="Pick add-ons" description="Add-ons help enhance your gaming experience." />
 
     <ng-container [formGroup]="form">
         @for (addOns of addOnses; track addOns.name) {
-        <add-ons-option (onSelected)="handleSelected($event)" [selected]="form.value[addOns.formControlName]" [addOns]="addOns">
+        <add-ons-option (onSelected)="handleSelected($event)" [selected]="form.value[addOns.formControlName]"
+            [addOns]="addOns">
             <input type="checkbox" [formControlName]="addOns.formControlName" />
         </add-ons-option>
         }
