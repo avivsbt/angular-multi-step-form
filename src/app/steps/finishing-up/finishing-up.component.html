@@ -1,24 +1,26 @@
 <section class="container">
     <description-step title="Finishing up" description="Double-check everything looks OK before confirming." />
 
-    <div class="finishing-plan">
-        <div class="finishing-plan-data">
-            {{plan().name}} ({{multiStepFormService.isYearly() ? "Yearly" : "Monthly"}})
-            <div (click)="onChangePlan()" class="finishing-plan-change">Change</div>
+    <div class="wrapper-finishing">
+        <div class="finishing-plan">
+            <div class="finishing-plan-data">
+                {{plan().name}} ({{multiStepFormService.isYearly() ? "Yearly" : "Monthly"}})
+                <div (click)="onChangePlan()" class="finishing-plan-change">Change</div>
+            </div>
+            <div class="finishing-plan-price">
+                ${{multiStepFormService.isYearly() ? plan().yearly + "/yr" : plan().monthly + "/mo"}}
+            </div>
         </div>
-        <div class="finishing-plan-price">
-            ${{multiStepFormService.isYearly() ? plan().yearly + "/yr" : plan().monthly + "/mo"}}
-        </div>
-    </div>
 
-    @for (addOns of filteredAddOns(); track addOns.name) {
-    <div>
-        {{addOns.name}}
-        <div class="finishing-add-ons-price">
-            +${{multiStepFormService.isYearly() ? addOns.yearly + "/yr" : addOns.monthly + "/mo"}}
+        @for (addOns of filteredAddOns(); track addOns.name) {
+        <div class="finishing-add-ons-item">
+            {{addOns.name}}
+            <div class="finishing-add-ons-price">
+                +${{multiStepFormService.isYearly() ? addOns.yearly + "/yr" : addOns.monthly + "/mo"}}
+            </div>
         </div>
+        }
     </div>
-    }
 
     <div class="finishing-total">
         <div class="finishing-total-text">

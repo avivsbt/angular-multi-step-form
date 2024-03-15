@@ -4,3 +4,65 @@
     flex-direction: column;
     justify-content: space-between;
 }
+
+.wrapper-finishing {
+    background-color: #f8f9fe;
+    border-radius: 5px;
+    padding: 25px;
+    font-size: 14px;
+}
+
+.finishing-plan {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #e7e8ed;
+}
+
+.finishing-plan-data {
+    color: #052757;
+    font-family: 'buntu-medium';
+}
+
+.finishing-plan-change {
+    color: #9999a1;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.finishing-plan-price {
+    font-family: 'buntu-medium';
+    color: #052757;
+}
+
+.finishing-add-ons-price {
+    color: #052757;
+}
+
+.finishing-add-ons-item {
+    color: #9999a1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.finishing-total {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 25px;
+}
+
+.finishing-total-text {
+    font-size: 14px;
+    color: #9999a1;
+}
+
+.finishing-total-price {
+    color: #473eff;
+    font-size: 18px;
+    font-family: 'buntu-bold';
+}
