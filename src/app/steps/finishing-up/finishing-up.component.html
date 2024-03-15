@@ -2,11 +2,33 @@
     <description-step title="Finishing up"
         description="Double-check everything looks OK before confirming."></description-step>
 
-    {{formValue() | json}}
-    {{formValue()?.plan?.plan}}
-    {{formValue()?.addOns?.onlineService}}
-    {{formValue()?.addOns?.largerStorage}}
-    {{formValue()?.addOns?.customizableProfile}}
+    <div class="finishing-plan">
+        <div class="finishing-plan-data">
+            {{plan().name}} ({{multiStepFormService.isYearly() ? "Yearly" : "Monthly"}})
+            <div (click)="onChangePlan()" class="finishing-plan-change">Change</div>
+        </div>
+        <div class="finishing-plan-price">
+            ${{multiStepFormService.isYearly() ? plan().yearly + "/yr" : plan().monthly + "/mo"}}
+        </div>
+    </div>
+
+    @for (addOns of filteredAddOns(); track addOns.name) {
+    <div>
+        {{addOns.name}}
+        <div class="finishing-add-ons-price">
+            +${{multiStepFormService.isYearly() ? addOns.yearly + "/yr" : addOns.monthly + "/mo"}}
+        </div>
+    </div>
+    }
+
+    <div class="finishing-total">
+        <div class="finishing-total-text">
+            Total (per {{multiStepFormService.isYearly() ? "year" : "month"}})
+        </div>
+        <div class="finishing-total-price">
+            +${{total()}}{{multiStepFormService.isYearly() ? "/yr" : "/mo"}}
+        </div>
+    </div>
 
     <wrapper-buttons>
         <form-button [disabled]="disabled" text="Confirm" [typeButton]="'submit'" [button]="'confirm'"></form-button>
