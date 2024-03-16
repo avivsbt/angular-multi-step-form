@@ -1,4 +1,4 @@
-<section class="container">
+<section class="container" [ngClass]="{'wrapper-plan-mobile' : isMobile()}">
     <description-step title="Select your plan" description="You have the option of monthly or yearly billing." />
 
     <ng-container [formGroup]="form">

@@ -10,7 +10,8 @@
     <add-ons formGroupName="addOns"></add-ons>
     }
     @case (step.FinishingUp) {
-    <finishing-up [disabled]="multiStepForm.invalid" [formValue]="multiStepForm.value"></finishing-up>
+    <finishing-up formGroupName="personalInfo" [invalid]="multiStepForm.invalid"
+        [formValue]="multiStepForm.value"></finishing-up>
     }
     @case (step.ThankYou) {
     <thank-you></thank-you>

@@ -8,6 +8,7 @@
     transition: 0.3s;
     border: 1px solid transparent;
     cursor: pointer;
+    margin-bottom: 10px;
 }
 
 .wrapper-checkbox {

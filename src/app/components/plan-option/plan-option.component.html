@@ -1,4 +1,4 @@
-<div class="wrapper-plan-option">
+<div class="wrapper-plan-option" [ngClass]="{'wrapper-plan-option-mobile' : isMobile()}">
     <ng-content></ng-content>
 
     <div class="plan-icon">
@@ -8,8 +8,10 @@
     <div class="plan-data">
         <div class="plan-text">{{plan.name}}</div>
         <div class="plan-price">${{multiStepFormService.isYearly() ? plan.yearly + "/yr" : plan.monthly + "/mo"}}</div>
-        @if(multiStepFormService.isYearly()) {
-        <div class="plan-free">2 months free</div>
-        }
+
+        <div class="plan-free">
+            @if(multiStepFormService.isYearly()){2 months free}
+        </div>
+
     </div>
 </div>

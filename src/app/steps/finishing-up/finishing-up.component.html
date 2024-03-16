@@ -31,8 +31,23 @@
         </div>
     </div>
 
+    <div class="error">
+        @if(form.get('name')?.errors?.['required']) {
+        The name field is required. <br />
+        }
+        @if(form.get('email')?.errors?.['required']) {
+        The email field is required. <br />
+        }
+        @if(form.get('email')?.errors?.['pattern']) {
+        The email is not valid <br />
+        }
+        @if(form.get('phone')?.errors?.['required']) {
+        The phone number field is required.
+        }
+    </div>
+
     <wrapper-buttons>
-        <form-button [disabled]="disabled" text="Confirm" [typeButton]="'submit'" [button]="'confirm'"></form-button>
+        <form-button [disabled]="invalid" text="Confirm" [typeButton]="'submit'" [button]="'confirm'"></form-button>
         <form-button text="Go Back" [button]="'back'"></form-button>
     </wrapper-buttons>
 </section>

@@ -9,6 +9,7 @@
     background-color: #f8f9fe;
     border-radius: 5px;
     padding: 25px;
+    margin-bottom: 10px;
     font-size: 14px;
 }
 
@@ -65,4 +66,9 @@
     color: #473eff;
     font-size: 18px;
     font-family: 'buntu-bold';
+}
+
+.error {
+    color: #f52b45;
+    font-size: 12px;
 }

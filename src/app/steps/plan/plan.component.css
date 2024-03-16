@@ -10,8 +10,17 @@
     gap: 10px;
 }
 
-.plan-option{
+.plan-option {
     width: 33.3%;
+}
+
+.wrapper-plan-mobile .wrapper-plan-options {
+    margin-bottom: 10px;
+    flex-direction: column;
+}
+
+.wrapper-plan-mobile .plan-option {
+    width: 100%;
 }
 
 .wrapper-plan-options input {
@@ -29,6 +38,7 @@
     transition: 0.3s;
 }
 
-.plan-option input:checked, .plan-option input:hover {
+.plan-option input:checked,
+.plan-option input:hover {
     border: 1px solid #534aa7;
 }
