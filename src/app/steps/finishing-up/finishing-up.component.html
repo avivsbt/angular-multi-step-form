@@ -31,6 +31,7 @@
         </div>
     </div>
 
+    @if(invalid){
     <div class="error">
         @if(form.get('name')?.errors?.['required']) {
         The name field is required. <br />
@@ -45,7 +46,8 @@
         The phone number field is required.
         }
     </div>
-
+    }
+    
     <wrapper-buttons>
         <form-button [disabled]="invalid" text="Confirm" [typeButton]="'submit'" [button]="'confirm'"></form-button>
         <form-button text="Go Back" [button]="'back'"></form-button>
