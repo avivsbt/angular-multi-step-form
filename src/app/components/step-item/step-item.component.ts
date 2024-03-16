@@ -1,11 +1,12 @@
 import { NgClass } from '@angular/common';
-import { Component, Input, computed, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, computed, inject } from '@angular/core';
 import { MultiStepFormService } from '../../services/multi-step-form.service';
 import { ESteps } from '../../types';
 
 @Component({
   selector: 'step-item',
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [NgClass],
   templateUrl: './step-item.component.html',
   styleUrl: './step-item.component.css'

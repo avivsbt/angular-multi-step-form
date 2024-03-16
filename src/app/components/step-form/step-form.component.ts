@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { MultiStepFormService } from '../../services/multi-step-form.service';
 import { AddOnsComponent } from '../../steps/add-ons/add-ons.component';
 import { FinishingUpComponent } from '../../steps/finishing-up/finishing-up.component';
@@ -11,6 +11,7 @@ import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 @Component({
   selector: 'step-form',
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
     PersonalInfoComponent,
     PlanComponent,

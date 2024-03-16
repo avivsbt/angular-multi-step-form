@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, computed, inject, input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit, computed, inject, input } from '@angular/core';
 import { DescriptionStepComponent } from '../../components/description-step/description-step.component';
 import { WrapperButtonsComponent } from '../../components/wrapper-buttons/wrapper-buttons.component';
 import { FormButtonComponent } from '../../components/form-button/form-button.component';
@@ -11,6 +11,7 @@ import { FormGroup, FormGroupDirective } from '@angular/forms';
 @Component({
   selector: 'finishing-up',
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
     DescriptionStepComponent,
     FormButtonComponent,

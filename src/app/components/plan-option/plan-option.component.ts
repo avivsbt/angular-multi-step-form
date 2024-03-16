@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, inject, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit, inject, signal } from '@angular/core';
 import { MultiStepFormService } from '../../services/multi-step-form.service';
 import { IPlan } from '../../types';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
@@ -7,6 +7,7 @@ import { NgClass } from '@angular/common';
 @Component({
   selector: 'plan-option',
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [NgClass],
   templateUrl: './plan-option.component.html',
   styleUrl: './plan-option.component.css'

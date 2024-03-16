@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit, inject } from '@angular/core';
 import { DescriptionStepComponent } from '../../components/description-step/description-step.component';
 import { FormGroupDirective, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { FormButtonComponent } from '../../components/form-button/form-button.component';
@@ -10,6 +10,7 @@ import { AddOnsOptionComponent } from '../../components/add-ons-option/add-ons-o
 @Component({
   selector: 'add-ons',
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
     DescriptionStepComponent,
     ReactiveFormsModule,

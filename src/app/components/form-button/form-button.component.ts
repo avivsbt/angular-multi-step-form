@@ -1,9 +1,10 @@
-import { Component, Input, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, inject } from '@angular/core';
 import { MultiStepFormService } from '../../services/multi-step-form.service';
 
 @Component({
   selector: 'form-button',
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [],
   templateUrl: './form-button.component.html',
   styleUrl: './form-button.component.css'

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, inject, input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit, inject, input } from '@angular/core';
 import { DescriptionStepComponent } from '../../components/description-step/description-step.component';
 import { FormGroup, FormGroupDirective, ReactiveFormsModule } from '@angular/forms';
 import { FormButtonComponent } from '../../components/form-button/form-button.component';
@@ -7,6 +7,7 @@ import { WrapperButtonsComponent } from '../../components/wrapper-buttons/wrappe
 @Component({
   selector: 'personal-info',
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
     DescriptionStepComponent,
     ReactiveFormsModule,
