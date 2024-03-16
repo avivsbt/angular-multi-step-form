@@ -4,7 +4,7 @@ import { FormGroupDirective, FormGroup, ReactiveFormsModule } from '@angular/for
 import { FormButtonComponent } from '../../components/form-button/form-button.component';
 import { WrapperButtonsComponent } from '../../components/wrapper-buttons/wrapper-buttons.component';
 import { IaddOns } from '../../types';
-import { addOnses } from '../../shared/data/data';
+import { addOnses } from '../../data/data';
 import { AddOnsOptionComponent } from '../../components/add-ons-option/add-ons-option.component';
 
 @Component({

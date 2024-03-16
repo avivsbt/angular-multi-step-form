@@ -2,7 +2,7 @@ import { Component, Input, OnInit, inject, signal } from '@angular/core';
 import { DescriptionStepComponent } from '../../components/description-step/description-step.component';
 import { FormGroupDirective, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { FormButtonComponent } from '../../components/form-button/form-button.component';
-import { plans } from '../../shared/data/data';
+import { plans } from '../../data/data'
 import { IPlan } from '../../types';
 import { WrapperButtonsComponent } from '../../components/wrapper-buttons/wrapper-buttons.component';
 import { PlanOptionComponent } from '../../components/plan-option/plan-option.component';

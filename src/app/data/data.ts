@@ -1,4 +1,4 @@
-import { IPlan, IaddOns } from "../../types";
+import { IPlan, IaddOns } from "../types";
 
 export const plans: IPlan[] = [
     { value: "arcade", name: "Arcade", monthly: 9, yearly: 90 },

@@ -5,7 +5,7 @@ import { FormButtonComponent } from '../../components/form-button/form-button.co
 import { JsonPipe } from '@angular/common';
 import { ESteps, FormValue, IPlan, IaddOns } from '../../types';
 import { MultiStepFormService } from '../../services/multi-step-form.service';
-import { addOnses, plans } from '../../shared/data/data';
+import { addOnses, plans } from '../../data/data'
 import { FormGroup, FormGroupDirective } from '@angular/forms';
 
 @Component({
