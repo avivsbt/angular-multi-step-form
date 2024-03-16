@@ -4,4 +4,4 @@
 
 Building Complex Forms in Angular with Nested Form Groups
 
-![](app/src/main/res/drawable/refrence_image.png)
+![](src/assets/images/multi-step-form.jpeg)
